@@ -1,0 +1,409 @@
+:root {
+  --clr-primary: #3D6E6B;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Montserrat', sans-serif;
+}
+
+@font-face {
+  font-family: Calming;
+  src: url(./assets/Calming.otf) format('truetype');
+
+}
+
+/* .body {
+  display: flex;
+  margin-top: 35px;
+  padding: 0px 60px;
+  justify-content: space-between;
+  align-items: center;
+  align-self: stretch;
+} */
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: var(--clr-primary);
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  cursor: pointer;
+  margin: 35px 0;
+  height: 90px;
+}
+
+
+.logo {
+  margin-left: 40px;
+}
+
+.menu {
+  margin-right: 24px;
+  text-decoration: none;
+  color: var(--clr-primary);
+}
+
+.elipse {
+  margin-right: 24px;
+  padding: 3px;
+}
+
+nav {
+  margin-right: 40px;
+}
+
+a:hover {
+  opacity: 0.8;
+}
+
+a:active {
+  opacity: 0.6;
+}
+
+.button {
+  color: var(--clr-primary);
+  font-family: Montserrat;
+  font-size: 32px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  border-radius: 10px;
+  padding: 10px;
+  border: none;
+  appearance: none;
+  cursor: pointer;
+  background: none;
+  text-decoration: underline;
+}
+
+button:hover {
+  opacity: 0.8;
+}
+
+button:active {
+  opacity: 0.6;
+}
+
+.banner {
+  display: flex;
+  flex-direction: column;
+  height: 843px;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  background-image: url('./assets/banner.jpeg');
+  background-position: center;
+  background-size: cover;
+}
+
+.h1-banner {
+  color: #FFF;
+  text-align: center;
+  font-family: Calming;
+  font-size: 120px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 90%;
+}
+
+.p-banner {
+  color: #FFF;
+  text-align: center;
+  font-family: Montserrat;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 120%;
+  width: 650px;
+}
+
+.h1-banner, .p-banner {
+  max-width: 60%;
+}
+
+.estrutura {
+  display: flex;
+  justify-content: center;
+  color: var(--clr-primary);
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  text-align: center;
+  margin: 64px 0px;
+
+
+}
+
+.q1, .q2, .q3 {
+  margin-right: 24px;
+}
+
+.h1-estrutura {
+  font-size: 64px;
+}
+
+.p-estrutura {
+  font-size: 16px;
+  width: 255px;
+}
+
+.sobre {
+  display: flex;
+  justify-content: space-between;
+  color: var(--clr-primary);
+  font-size: 22px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  gap: 20px;
+  margin: 64px 60px;
+}
+
+.h1-sobre h1 {
+  font-size: 38px;
+  font-family: Calming;
+}
+
+.p-toalhas {
+  width: 350px;
+  height: 350px;
+  text-align: right;
+}
+
+.banheiro-cama {
+  flex-wrap: wrap;
+  width: 350px;
+}
+
+.missao {
+  width: 350px;
+  height: 350px;
+}
+
+.procedimentos {
+  display: flex;
+  justify-content: center;
+  margin: 64px 0 32px 0;
+}
+
+.servicos {
+  display: flex;
+  justify-content: center;
+  color: var(--clr-primary);
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  margin-bottom: 32px;
+}
+
+.img-procedimentos {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 60px;
+  color: var(--clr-primary);
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  height: auto;
+}
+
+.h1-procedimentos {
+  color: var(--clr-primary);
+  font-family: Calming;
+  font-size: 48px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.line7 {
+  width: 100%;
+}
+
+.wrapper {
+  display: flex;
+  gap: 2rem;
+  justify-content: center;
+  color: var(--clr-primary);
+  margin: 0 60px 32px 60px;
+}
+
+.carrossel {
+  display: flex;
+  flex-direction: column;
+  width: fit-content;
+  max-width: 20rem;
+}
+
+.carrossel-img img {
+  width: 100%;
+  aspect-ratio: 5/5;
+}
+
+.procedure {
+  font-size: 1.2rem;
+}
+
+.carrossel-price {
+  display: flex;
+  justify-content: space-between;
+}
+
+.value {
+  font-weight: bold;
+}
+
+.next {
+  display: flex;
+  align-items: center;
+}
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 64px;
+}
+
+.sobre-dalila {
+  display: flex;
+  justify-content: center;
+  background: var(--clr-primary);
+}
+
+.name-perfil {
+  display: flex;
+  padding: 20px;
+  justify-content: space-between;
+  position: relative;
+}
+
+.h1-name {
+  color: #ECCDA4;
+  font-family: Calming;
+  font-size: 100px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 100px;
+}
+
+.certificacoes {
+  color: #ECCDA4;
+  font-family: Montserrat;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+}
+
+.frame {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.img-perfil {
+  width: 630px;
+  height: 874px;
+}
+
+.text-perfil {
+  color: #FFF;
+  text-align: justify;
+  font-family: Montserrat;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  padding: 20px;
+}
+
+.line8 {
+  width: 100%;
+  margin-bottom: 60px;
+}
+
+.contact {
+  display: flex;
+  padding: 20px;
+  border-radius: 10px;
+  gap: 20px;
+  justify-content: space-between;
+  color: var(--clr-primary);
+}
+
+.entre-contato {
+  color: var(--clr-primary);
+  font-size: 48px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.entre-contato h1{
+  font-family: "Calming";
+}
+
+.duvidas {
+  display: flex;
+  width: 366px;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 12px;
+  font-family: 'Montserrat';
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+label {
+  font-size: 20px;
+}
+
+input {
+  height: 24px;
+  border-radius: 3px;
+  border: 1px solid gray;
+  padding-left: 10px;
+  outline-color: var(--clr-primary);
+}
+
+.map {
+  display: flex;
+  flex-direction: column;
+  text-align: right;
+}
+
+.h1-map {
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+iframe {
+  margin-top: 10px;
+}
+
+footer {
+  display: flex;
+  justify-content: center;
+  padding: 35px 60px;
+  align-items: center;
+  gap: 16px;
+  align-self: stretch;
+  background: var(--clr-primary);
+}
