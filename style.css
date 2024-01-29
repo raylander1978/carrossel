@@ -229,55 +229,85 @@ button:active {
   width: 100%;
 }
 
-.wrapper {
-  display: flex;
-  gap: 2rem;
-  justify-content: center;
-  color: var(--clr-primary);
-  margin: 0 60px 32px 60px;
-  height: 350px;
-}
-
 .slider {
+  min-height: 100vh;
   display: flex;
-  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: #efefef;
+  color: var(--clr-primary);
 }
-
-.carrossel {
-  display: flex;
-  flex-direction: column;
-  width: fit-content;
-  max-width: 20rem;
-}
-
-.carrossel-img img {
+.container {
+  max-width: 1400px;
   width: 100%;
-  aspect-ratio: 5/5;
+  padding: 60px 0;
 }
-
-.procedure {
-  font-size: 1.2rem;
+.slide-container {
+  margin: 0 30px;
+  overflow: hidden;
 }
-
+.card {
+  background: #fff;
+  border-radius: 8px;
+}
+.card .image-box {
+  height: 320px;
+  width: 320px;
+}
+.card .image-box img {
+  width: 100%;
+  height: 100%;
+  border-radius: 8px 8px 0 0;
+}
 .carrossel-price {
   display: flex;
   justify-content: space-between;
 }
-
 .value {
   font-weight: bold;
 }
-
-.next {
+.card .profile-details {
   display: flex;
   align-items: center;
+  column-gap: 12px;
+  padding: 15px;
+}
+.card .profile-details img {
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+}
+.profile-details .name {
+  font-size: 15px;
+  font-weight: 500;
+}
+.profile-details .job {
+  font-size: 12px;
+  font-weight: 500;
+  color: #4d4d4d;
 }
 
-.pagination {
-  display: flex;
-  justify-content: center;
-  gap: 1rem;
-  margin-bottom: 64px;
+.swiper-navBtn {
+  color: #000;
+  height: 50px;
+  width: 50px;
+  transform: translateY(-40%);
+  background: #fff;
+  border-radius: 50%;
+}
+.swiper-navBtn::before,
+.swiper-navBtn::after {
+  font-size: 24px;
+}
+
+.swiper-pagination-bullet {
+  background-color: #333;
+}
+
+@media screen and (max-width: 768px) {
+  .swiper-navBtn {
+    display: none;
+  }
 }
 
 .sobre-dalila {

@@ -1,28 +1,33 @@
-  document.addEventListener("DOMContentLoaded", function () {
-    const sliders = document.querySelectorAll(".slider");
-    let currentIndex = 0;
+var swiper = new Swiper(".slide-container", {
+  slidesPerView: 4,
+  spaceBetween: 20,
+  sliderPerGroup: 4,
+  loop: true,
+  centerSlide: "true",
+  fade: "true",
+  grabCursor: "true",
+  pagination: {
+    el: ".swiper-pagination",
+    clickable: true,
+    dynamicBullets: true,
+  },
+  navigation: {
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev",
+  },
 
-    function showSlide(index) {
-      sliders.forEach((slider) => {
-        slider.classList.remove("show");
-      });
-
-      sliders[index].classList.add("show");
-    }
-
-    function nextSlide() {
-      currentIndex = (currentIndex + 1) % sliders.length;
-      showSlide(currentIndex);
-    }
-
-    function prevSlide() {
-      currentIndex = (currentIndex - 1 + sliders.length) % sliders.length;
-      showSlide(currentIndex);
-    }
-
-    document.querySelector(".next").addEventListener("click", nextSlide);
-    document.querySelector(".prev").addEventListener("click", prevSlide);
-
-    // Exibir o primeiro slide ao carregar a página
-    showSlide(currentIndex);
-  });
+  breakpoints: {
+    0: {
+      slidesPerView: 1,
+    },
+    520: {
+      slidesPerView: 2,
+    },
+    768: {
+      slidesPerView: 3,
+    },
+    1000: {
+      slidesPerView: 4,
+    },
+  },
+});
