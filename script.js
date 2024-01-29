@@ -1,32 +1,28 @@
-document.addEventListener("DOMContentLoaded", function () {
-    const carrossel = document.querySelector(".wrapper .carrossel");
-    const items = document.querySelectorAll(".wrapper .carrossel");
-    const totalItems = items.length;
+  document.addEventListener("DOMContentLoaded", function () {
+    const sliders = document.querySelectorAll(".slider");
     let currentIndex = 0;
-  
-    // Adiciona a classe "show" ao item atual
-    items[currentIndex].classList.add("show");
-  
-    // Adiciona um ouvinte de evento para a seta "Next"
-    document.querySelector(".next").addEventListener("click", function () {
-      if (currentIndex < totalItems - 3) {
-        // Oculta o item atual
-        items[currentIndex].classList.remove("show");
-        // Mostra o próximo item
-        currentIndex++;
-        items[currentIndex + 2].classList.add("show");
-      }
-    });
-  
-    // Adiciona um ouvinte de evento para a seta "Previous"
-    document.querySelector(".prev").addEventListener("click", function () {
-      if (currentIndex > 0) {
-        // Oculta o item atual
-        items[currentIndex + 2].classList.remove("show");
-        // Mostra o item anterior
-        currentIndex--;
-        items[currentIndex].classList.add("show");
-      }
-    });
+
+    function showSlide(index) {
+      sliders.forEach((slider) => {
+        slider.classList.remove("show");
+      });
+
+      sliders[index].classList.add("show");
+    }
+
+    function nextSlide() {
+      currentIndex = (currentIndex + 1) % sliders.length;
+      showSlide(currentIndex);
+    }
+
+    function prevSlide() {
+      currentIndex = (currentIndex - 1 + sliders.length) % sliders.length;
+      showSlide(currentIndex);
+    }
+
+    document.querySelector(".next").addEventListener("click", nextSlide);
+    document.querySelector(".prev").addEventListener("click", prevSlide);
+
+    // Exibir o primeiro slide ao carregar a página
+    showSlide(currentIndex);
   });
-  

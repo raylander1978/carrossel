@@ -235,6 +235,12 @@ button:active {
   justify-content: center;
   color: var(--clr-primary);
   margin: 0 60px 32px 60px;
+  height: 350px;
+}
+
+.slider {
+  display: flex;
+  flex-direction: column;
 }
 
 .carrossel {
