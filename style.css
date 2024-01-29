@@ -230,11 +230,9 @@ button:active {
 }
 
 .slider {
-  min-height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
-  background: #efefef;
   color: var(--clr-primary);
 }
 .container {
